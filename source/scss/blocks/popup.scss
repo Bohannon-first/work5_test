@@ -1,0 +1,9 @@
+.popup {
+  width: 616px;
+  background-color: $main-white;
+  border-radius: 5px;
+
+  &__wrapper {
+    padding: 30px 19px 35px 30px;
+  }
+}

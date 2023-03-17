@@ -1,0 +1,56 @@
+.table>:not(caption)>*>* {
+  border-bottom-width: 0;
+}
+
+.table-shops {
+  background-color: $main-white;
+  border-radius: 5px;
+  padding: 26px 32px;
+
+  th {
+    color: $main-dark-text;
+  }
+
+  td {
+    color: $secondary-dark-text;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  // table-shops__row
+  &__row:nth-child(odd):not(.table-shops__row--title) {
+    border-bottom: 1px solid $main-gray;
+  }
+
+  // table-shops__row--title
+  &__row--title {
+
+    // justify-content: space-evenly;
+    th {
+      // padding-top: 0;
+      // padding-bottom: 0;
+    }
+  }
+
+  .table-shops__row--title>th:nth-child(1) {
+    width: 56px;
+  }
+
+  .table-shops__row--title>th:nth-child(2) {
+    width: 147px;
+  }
+
+  .table-shops__row--title>th:nth-child(3) {
+    width: 189px;
+  }
+
+  .table-shops__row--title>th:nth-child(4) {
+    width: 315px;
+  }
+}

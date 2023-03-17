@@ -1,0 +1,66 @@
+.button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  color: $main-white;
+  font-size: $second-size-text;
+  line-height: $main-interlining;
+  border-radius: 3px;
+  padding-left: 14px;
+  padding-right: 20px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  text-align: right;
+  border: none;
+}
+
+.button--available {
+  background-color: $main-green;
+  transition: background-color, color, 0.2s ease-out;
+}
+
+.button--available:hover,
+.button--available:focus {
+  background-color: $main-green-hover;
+  color: $main-white;
+  transition: background-color, color, 0.2s ease-out;
+}
+
+.button--available:active {
+  opacity: 0.5;
+}
+
+.button--disable {
+  background-color: $main-gray;
+}
+
+.button--create-shop {
+  width: 185px;
+  text-align: right;
+  margin-bottom: 35px;
+}
+
+.button--management-shops {
+  width: 149px;
+}
+
+.button--management-shops:nth-child(odd) {
+  margin-right: 10px;
+}
+
+.button--icon-close {
+  stroke: $main-white;
+}
+
+.button--icon-pencil {
+  stroke: $main-white;
+  fill: $main-white;
+}
+
+.button--form {
+  display: block;
+  width: 151px;
+  text-align: center;
+  margin-right: 10px;
+}

@@ -1,0 +1,149 @@
+.account {
+  background-color: $main-bgc;
+  min-height: 100vh;
+
+  // account__content-title
+  &__content-title {
+    font-size: $title-size;
+    color: $main-dark-text;
+    margin-bottom: 25px;
+  }
+
+  // account__content
+  &__content {
+    // background-color: $main-bgc;
+    padding: 22px 16px 20px 59px;
+  }
+
+  // account__content-breadcrumb
+  &__content-breadcrumb {
+    padding: 0;
+  }
+
+  &__content-breadcrumb .breadcrumb-link {
+    color: $breadcrumb-text;
+  }
+
+  // account__nav
+  &__nav {
+    max-width: 256px;
+    padding-left: 25px;
+    padding-top: 22px;
+    background-color: $main-white;
+    min-height: 100vh;
+  }
+
+  // account__nav-item
+  &__nav-item {
+    position: relative;
+    margin-bottom: 30px;
+    cursor: pointer;
+  }
+
+  &__nav-item:hover &__nav-link,
+  &__nav-item:focus &__nav-link {
+    color: $main-dark-text;
+    transform: scale(1.1);
+    transition: color, transform 0.2s ease-out;
+  }
+
+  &__nav-item:hover &__nav-item-svg,
+  &__nav-item:focus &__nav-item-svg {
+    stroke: $main-violet;
+  }
+
+  &__nav-item:active &__nav-link {
+    opacity: 0.5;
+  }
+
+  &__nav-item:active &__nav-item-svg {
+    opacity: 0.5;
+  }
+
+  // account__nav-link
+  &__nav-link {
+    display: inline-block;
+    color: $personal-account-text;
+    transition: color, transform 0.2s ease-out;
+  }
+
+  // account__nav-item-svg
+  &__nav-item-svg {
+    margin-right: 20px;
+  }
+
+  // Стилизация иконок пунктов личного кабинета
+  // account__nav-item-svg--home
+  &__nav-item-svg--home {
+    stroke: $secondary-gray;
+  }
+
+  // account__nav-item-svg--shops
+  &__nav-item-svg--shops {
+    fill: $secondary-gray;
+    stroke: $secondary-gray;
+  }
+
+  // account__nav-item-svg--megafon
+  &__nav-item-svg--megafon {
+    fill: $secondary-gray;
+  }
+
+  // account__nav-item-svg--statistics
+  &__nav-item-svg--statistics {
+    stroke: $secondary-gray;
+  }
+
+  // account__nav-item-svg--balance
+  &__nav-item-svg--balance {
+    stroke: $secondary-gray;
+  }
+
+  // account__nav-item-svg--avatar
+  &__nav-item-svg--avatar {
+    stroke: $secondary-gray;
+  }
+
+  // account__nav-item-svg--faq
+  &__nav-item-svg--faq {
+    fill: $secondary-gray;
+    stroke: $secondary-gray;
+  }
+
+  // account__nav-item-svg--support
+  &__nav-item-svg--support {
+    fill: $secondary-gray;
+  }
+
+  // account__nav-item-svg--exit
+  &__nav-item-svg--exit {
+    stroke: $secondary-gray;
+  }
+
+  // account__logo
+  &__logo {
+    display: block;
+    margin-bottom: 43px;
+  }
+
+  // Модификатор на активный пункт меню
+  // account__nav-item--current
+  &__nav-item--current &__nav-link {
+    color: $main-dark-text;
+  }
+
+  &__nav-item--current &__nav-item-svg {
+    stroke: $main-violet;
+  }
+
+  &__nav-item--current::before {
+    position: absolute;
+    content: '';
+    top: -13px;
+    left: -25px;
+    width: 4px;
+    height: 49px;
+    background-color: $main-violet;
+    box-shadow: 0 2px 10px $menu-item-shadow;
+  }
+}

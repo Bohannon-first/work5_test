@@ -1,0 +1,23 @@
+.breadcrumb-item {
+  margin-right: 8px;
+}
+
+.breadcrumb-item.active {
+  position: relative;
+  // margin-left: 5px;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  float: none;
+  padding-right: var(--bs-breadcrumb-item-padding-x);
+  color: var(--bs-breadcrumb-divider-color);
+  background-image: url('../img/content/icons/icon-breadcrumb.svg');
+  background-repeat: no-repeat;
+  width: 8px;
+  height: 9px;
+  top: 5px;
+  left: -3px;
+}
