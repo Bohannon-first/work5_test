@@ -2,7 +2,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   color: $main-white;
   font-size: $second-size-text;
   line-height: $main-interlining;
@@ -13,6 +12,11 @@
   padding-bottom: 7px;
   text-align: right;
   border: none;
+
+  @media (max-width: 1199px) {
+    font-size: $second-size-text;
+    padding: 5px 18px 5px 12px;
+  }
 }
 
 .button--available {
@@ -33,12 +37,24 @@
 
 .button--disable {
   background-color: $main-gray;
+  transition: background-color 0.2s ease-out;
+}
+
+.button--disable:hover,
+.button--disable:focus {
+  background-color: $main-gray-active;
+  transition: background-color 0.2s ease-out;
+}
+
+.button--disable:active {
+  opacity: 0.5;
 }
 
 .button--create-shop {
   width: 185px;
   text-align: right;
   margin-bottom: 35px;
+  margin-top: 10px;
 }
 
 .button--management-shops {
@@ -61,6 +77,7 @@
 .button--form {
   display: block;
   width: 151px;
+  font-size: $main-size-text;
   text-align: center;
   margin-right: 10px;
 }

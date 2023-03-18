@@ -5,7 +5,7 @@
     font-weight: $roboto-medium;
     font-size: $title-size;
     color: $main-dark-text;
-    margin-bottom: 47px;
+    margin-bottom: 42px;
   }
 
   // .form__list
@@ -16,7 +16,44 @@
   }
 
   // form__label
-  &__form__label {}
+  &__label {
+    position: relative;
+  }
+
+  // form__select
+  &__select {
+    margin-top: 7px;
+    border: 1px solid $main-border-color;
+    border-radius: 4px;
+    padding: 7px 15px 7px 14px;
+    width: 240px;
+    font-weight: $roboto-regular;
+    font-size: $second-size-text;
+    line-height: 21px;
+    color: $text-placeholder;
+    cursor: pointer;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    @media (max-width: 300px) {
+      width: 80vw;
+    }
+  }
+
+  &__label:not(.form__label--domain)::after {
+    position: absolute;
+    content: '';
+    top: 44px;
+    left: 215px;
+    width: 20px;
+    height: 20px;
+    background-image: url('../img/content/icons/icon-select-down.svg');
+    background-repeat: no-repeat;
+    z-index: 1000;
+    pointer-events: none;
+  }
 
   // .form__list-item
   &__list-item {
@@ -26,13 +63,59 @@
 
     // .form__list-item--domain
     &--domain {
+      position: relative;
       margin-bottom: 27px;
       width: 100%;
     }
   }
 
   &__list-item:not(&--domain) {
-    margin-bottom: 56px;
+    margin-bottom: 24px;
+  }
+
+  // form__input
+  &__input {
+    position: relative;
+    margin-top: 8px;
+    padding: 8px 160px 8px 14px;
+    background-color: $input-background;
+    font-weight: $roboto-medium;
+    font-size: $main-size-text;
+    color: $personal-account-text;
+    border: none;
+    box-sizing: border-box;
+
+    @media (max-width: 604px) {
+      padding-right: 90px;
+    }
+
+    @media (max-width: 370px) {
+      padding-right: 15px;
+    }
+  }
+
+  &__list-item--domain::before {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    content: '.work5.ru';
+    top: 29px;
+    right: 0;
+    width: 151px;
+    height: 37px;
+    background-color: $main-violet;
+    color: $main-white;
+    font-weight: $roboto-medium;
+    z-index: 100;
+
+    @media (max-width: 604px) {
+      width: 80px;
+    }
+
+    @media (max-width: 370px) {
+      display: none;
+    }
   }
 
   // form__description
@@ -47,9 +130,14 @@
     font-size: $second-size-text;
     line-height: $secondary-interlining;
     width: 488px;
+    color: $personal-account-text;
 
     a {
       color: $main-violet;
+    }
+
+    @media (max-width: 604px) {
+      margin-top: 15px;
     }
   }
 
@@ -62,5 +150,53 @@
   &__btn-wrapper {
     display: flex;
     flex-wrap: wrap;
+
+    :nth-child(1) {
+      @media (max-width: 370px) {
+        margin-bottom: 15px;
+      }
+    }
   }
+
+  // form__btn-close
+  &__btn-close {
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    transition: transform 0.3s ease-out;
+  }
+
+  // form__btn-close-svg
+  &__btn-close-svg {
+    stroke: $breadcrumb-text;
+    transition: stroke 0.3s ease-out;
+  }
+
+  &__btn-close:hover,
+  &__btn-close:focus {
+    transform: scale(1.2);
+    transition: transform 0.3s ease-out;
+  }
+
+  &__btn-close:hover &__btn-close-svg,
+  &__btn-close:focus &__btn-close-svg {
+    stroke: $main-red;
+    transition: stroke 0.3s ease-out;
+  }
+
+  &__btn-close:active {
+    opacity: 0.5;
+  }
+
+  &__btn-close-svg:active &__btn-close-svg {
+    opacity: 0.5;
+  }
+}
+
+// Красная обводка, если поле ввода не заполнено
+.form__input--error {
+  outline: 2px dashed $main-red;
 }

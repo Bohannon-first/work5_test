@@ -2,6 +2,16 @@
   background-color: $main-bgc;
   min-height: 100vh;
 
+  // account__wrapper
+  &__wrapper {
+    @media (max-width: 1199px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
   // account__content-title
   &__content-title {
     font-size: $title-size;
@@ -11,13 +21,22 @@
 
   // account__content
   &__content {
-    // background-color: $main-bgc;
     padding: 22px 16px 20px 59px;
+
+    @media (max-width: 1199px) {
+      font-size: $second-size-text;
+      padding: 20px 20px 20px 20px;
+    }
   }
 
   // account__content-breadcrumb
   &__content-breadcrumb {
     padding: 0;
+
+    @media (max-width: 1199px) {
+      margin-bottom: 20px;
+      width: 100%;
+    }
   }
 
   &__content-breadcrumb .breadcrumb-link {
@@ -31,13 +50,38 @@
     padding-top: 22px;
     background-color: $main-white;
     min-height: 100vh;
+
+    @media (max-width: 1199px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: initial;
+      max-width: 100%;
+    }
+
+    @media (max-width: 830px) {
+      padding: 20px 20px;
+    }
+  }
+
+  // account__sign-up-container
+  &__sign-up-container {
+    @media (max-width: 1199px) {
+      display: flex;
+      flex-direction: column;
+      padding-left: 24px;
+    }
   }
 
   // account__nav-item
   &__nav-item {
     position: relative;
-    margin-bottom: 30px;
+    margin-bottom: 29px;
     cursor: pointer;
+
+    @media (max-width: 1199px) {
+      display: flex;
+    }
   }
 
   &__nav-item:hover &__nav-link,
@@ -64,7 +108,15 @@
   &__nav-link {
     display: inline-block;
     color: $personal-account-text;
-    transition: color, transform 0.2s ease-out;
+    transition: color, transform, font-size 0.2s ease-out;
+
+    @media (max-width: 1199px) {
+      font-size: $big-size-text;
+    }
+
+    @media (max-width: 830px) {
+      font-size: $title-size;
+    }
   }
 
   // account__nav-item-svg

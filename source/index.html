@@ -16,12 +16,14 @@
     <section class="account">
       <h1 class="visually-hidden">Личный кабинет, раздел "Мои магазины"</h1>
       <div class="container-fluid">
-        <div class="row">
-
-          <nav class="col-3 account__nav">
+        <div class="row account__wrapper">
+          <nav class="col-12 col-xl-3 account__nav">
             <a class="account__logo" href="#">
               <span class="visually-hidden">Ссылка на главную страницу Work5</span>
-              <img src="../img/content/logo_Work5.png" alt="Логотип Work5">
+              <picture>
+                <source type="image/webp" srcset="img/content/logo_Work5.webp">
+                <img src="img/content/logo_Work5.png" alt="Логотип Work5">
+              </picture>
             </a>
             <ul class="account__nav-list">
               <li class="account__nav-item">
@@ -81,8 +83,8 @@
             </ul>
           </nav>
 
-          <div class="col-9 account__content">
-            <div class="row justify-content-between">
+          <div class="col-12 col-xl-9 account__content">
+            <div class="row justify-content-between account__sign-up-container">
               <nav class="col-3 account__content-breadcrumb" style="--bs-breadcrumb-divider: '>';"
                 aria-label="breadcrumb">
                 <ol class="breadcrumb">
@@ -103,8 +105,12 @@
                 </li>
                 <li class="col sign-up__item sign-up__item--avatar">
                   <a class="sign-up__avatar" href="#">
-                    <img src="../img/content/avatar.png" alt="Аватарка Максима Добжанского" width="41" height="41">
-                    Максим Добжанский</a>
+                    <picture>
+                      <source type="image/webp" srcset="img/content/avatar.webp">
+                      <img src="img/content/avatar.png" alt="Аватарка Максима Добжанского" width="41" height="41">
+                    </picture>
+                    Максим Добжанский
+                  </a>
                 </li>
               </ul>
             </div>
@@ -117,7 +123,7 @@
             <div class="account__management-shops">
               <h2 class="account__content-title">Управление магазинами</h2>
               <div class="table-shops">
-                <table class="table">
+                <table class="table table-shops__table">
                   <thead>
                     <tr class="table-shops__row table-shops__row--title">
                       <th scope="col">№</th>
@@ -128,10 +134,10 @@
                   </thead>
                   <tbody>
                     <tr class="table-shops__row">
-                      <td scope="row">12345</td>
+                      <td>12345</td>
                       <td>Дипломная работа</td>
                       <td>http://www.work5.ru/services</td>
-                      <td class="row">
+                      <td class="row table-shops__btn-container">
                         <a class="button button--available button--management-shops" href="#">
                           <svg class="button--icon-pencil" width='14' height='16'>
                             <use xlink:href='img/sprite.svg#icon-pencil'></use>
@@ -145,10 +151,10 @@
                       </td>
                     </tr>
                     <tr class="table-shops__row">
-                      <td scope="row">12345</td>
+                      <td>12345</td>
                       <td>Дипломная работа</td>
                       <td>http://www.work5.ru/services</td>
-                      <td class="row">
+                      <td class="row table-shops__btn-container">
                         <a class="button button--available button--management-shops" href="#">
                           <svg class="button--icon-pencil" width='14' height='16'>
                             <use xlink:href='img/sprite.svg#icon-pencil'></use>
@@ -164,25 +170,22 @@
                   </tbody>
                 </table>
               </div>
-
             </div>
           </div>
-
-
         </div>
-
       </div>
     </section>
   </main>
   <footer></footer>
+
   <div class="popup">
     <div class="popup__wrapper">
-      <form class="form" action="#" method="post">
+      <form class="form" action="#" method="post" autocomplete="off">
         <h3 class="form__title">Создать магазин</h3>
         <ul class="form__list">
           <li class="form__list-item">
             <label class="form__label" for="template-shop">Шаблон</label>
-            <select name="template-shop" id="template-shop">
+            <select class="form__select" name="template-shop" id="template-shop">
               <option value="standart">Стандартный</option>
               <option value="ready">Готовый</option>
               <option value="familiar">Привычный</option>
@@ -190,15 +193,15 @@
           </li>
           <li class="form__list-item">
             <label class="form__label" for="color-scheme">Цветовая схема</label>
-            <select name="color-scheme" id="color-scheme">
+            <select class="form__select" name="color-scheme" id="color-scheme">
               <option value="classic">Классическая</option>
               <option value="standart">Стандартная</option>
               <option value="neutral">Нейтральная</option>
             </select>
           </li>
           <li class="form__list-item form__list-item--domain">
-            <label class="form__label" for="domain">Домен</label>
-            <input name="domain" type="text" id="domain" placeholder="Например: ivangrozniy">
+            <label class="form__label form__label--domain" for="domain">Домен</label>
+            <input class="form__input" name="domain" type="text" id="domain" placeholder="Например: ivangrozniy">
           </li>
         </ul>
         <div class="form__description">
@@ -211,10 +214,15 @@
           </p>
         </div>
         <div class="form__btn-wrapper">
-          <button class="button button--disable button--form" type="button">Отмена</button>
-          <button class="button button--available button--form" type="button">Создать</button>
+          <button class="button button--disable button--form" type="button" id="form-btn-cancel">Отмена</button>
+          <button class="button button--available button--form" type="button" id="form-btn-send">Создать</button>
         </div>
       </form>
+      <button class="form__btn-close" type="button">
+        <svg class='form__btn-close-svg' width='17' height='17'>
+          <use xlink:href='img/sprite.svg#modal-icon-close'></use>
+        </svg>
+      </button>
     </div>
   </div>
   <script src="js/bootstrap/bootstrap.min.js"></script>

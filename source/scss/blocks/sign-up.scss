@@ -2,6 +2,16 @@
   padding: 0;
   width: 337px;
 
+  @media (max-width: 1199px) {
+    margin-right: 10px;
+    margin-bottom: 20px;
+  }
+
+  @media (max-width: 830px) {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+
   // sign-up__item
   &__item {
     padding: 0;
@@ -12,7 +22,6 @@
 
     display: flex;
     align-items: center;
-    // width: 256px;
     background-color: $main-white;
     border-radius: 5px;
     padding: 10px 17px;
@@ -41,7 +50,6 @@
     border: 1px solid $secondary-border-color;
     border-radius: 5px;
     margin-right: 16px;
-
   }
 
   // sign-up__mail

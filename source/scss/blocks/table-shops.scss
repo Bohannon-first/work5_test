@@ -5,7 +5,19 @@
 .table-shops {
   background-color: $main-white;
   border-radius: 5px;
-  padding: 26px 32px;
+  padding: 16px 23px;
+  box-shadow: 0 11px 21px $table-shadow;
+
+  @media (max-width: 830px) {
+    width: 100vw;
+    overflow-x: auto;
+    padding: 0;
+  }
+
+  // table-shops__table
+  &__table {
+    margin: 0;
+  }
 
   th {
     color: $main-dark-text;
@@ -17,7 +29,6 @@
     padding-bottom: 20px;
   }
 
-
   &__row {
     display: flex;
     justify-content: space-between;
@@ -26,16 +37,6 @@
   // table-shops__row
   &__row:nth-child(odd):not(.table-shops__row--title) {
     border-bottom: 1px solid $main-gray;
-  }
-
-  // table-shops__row--title
-  &__row--title {
-
-    // justify-content: space-evenly;
-    th {
-      // padding-top: 0;
-      // padding-bottom: 0;
-    }
   }
 
   .table-shops__row--title>th:nth-child(1) {
@@ -53,4 +54,21 @@
   .table-shops__row--title>th:nth-child(4) {
     width: 315px;
   }
+}
+
+// Стилизация скролла таблицы
+.table-shops::-webkit-scrollbar-track {
+  background-color: $text-placeholder;
+  border-radius: 5px;
+}
+
+.table-shops::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  background-color: $main-red;
+}
+
+.table-shops::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: $main-red;
 }
