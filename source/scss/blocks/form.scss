@@ -53,6 +53,12 @@
     background-repeat: no-repeat;
     z-index: 1000;
     pointer-events: none;
+    transition: opacity 0.3s ease-out;
+
+    @media (max-width: 280px) {
+      opacity: 0;
+      transition: opacity 0.3s ease-out;
+    }
   }
 
   // .form__list-item
@@ -150,12 +156,6 @@
   &__btn-wrapper {
     display: flex;
     flex-wrap: wrap;
-
-    :nth-child(1) {
-      @media (max-width: 370px) {
-        margin-bottom: 15px;
-      }
-    }
   }
 
   // form__btn-close

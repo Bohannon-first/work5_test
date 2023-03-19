@@ -32,10 +32,12 @@
   // account__content-breadcrumb
   &__content-breadcrumb {
     padding: 0;
+    transform: translateX(11px);
 
     @media (max-width: 1199px) {
       margin-bottom: 20px;
       width: 100%;
+      transform: translateX(-11px);
     }
   }
 
@@ -117,6 +119,10 @@
     @media (max-width: 830px) {
       font-size: $title-size;
     }
+
+    @media (max-width: 370px) {
+      font-size: 16px;
+    }
   }
 
   // account__nav-item-svg
@@ -197,5 +203,11 @@
     height: 49px;
     background-color: $main-violet;
     box-shadow: 0 2px 10px $menu-item-shadow;
+    transition: left 0.2s ease-out;
+
+    @media (max-width: 230px) {
+      left: -10px;
+      transition: left 0.2s ease-out;
+    }
   }
 }

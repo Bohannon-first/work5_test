@@ -79,5 +79,13 @@
   width: 151px;
   font-size: $main-size-text;
   text-align: center;
+
+  @media (max-width: 370px) {
+    margin-bottom: 15px;
+    margin-right: 0;
+  }
+}
+
+.button--form:first-child {
   margin-right: 10px;
 }
