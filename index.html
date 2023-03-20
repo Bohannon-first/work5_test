@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Work5</title>
+  <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="css/main.min.css">
+</head>
+
+<body>
+  <header></header>
+  <main>
+    <section class="account">
+      <h1 class="visually-hidden">Личный кабинет, раздел "Мои магазины"</h1>
+      <div class="container-fluid">
+        <div class="row account__wrapper">
+          <nav class="col-12 col-xl-3 account__nav">
+            <a class="account__logo" href="#">
+              <span class="visually-hidden">Ссылка на главную страницу Work5</span>
+              <picture>
+                <source type="image/webp" srcset="img/content/logo_Work5.webp">
+                <img src="img/content/logo_Work5.png" alt="Логотип Work5" width="82" height="32">
+              </picture>
+            </a>
+            <ul class="account__nav-list">
+              <li class="account__nav-item">
+                <svg class='account__nav-item-svg account__nav-item-svg--home' width="21" height="19">
+                  <use xlink:href='img/sprite.svg#icon-home'></use>
+                </svg>
+                <a class="account__nav-link" href="#" aria-label="Перейти на главную страницу">Главная</a>
+              </li>
+              <li class="account__nav-item account__nav-item--current">
+                <svg class='account__nav-item-svg account__nav-item-svg--shops' width="21" height="19">
+                  <use xlink:href='img/sprite.svg#icon-shops'></use>
+                </svg>
+                <a class="account__nav-link" href="#" aria-label="Перейти на страницу мои магазины">Мои магазины</a>
+              </li>
+              <li class="account__nav-item">
+                <svg class='account__nav-item-svg account__nav-item-svg--megafon' width="21" height="19">
+                  <use xlink:href='img/sprite.svg#icon-megafon'></use>
+                </svg>
+                <a class="account__nav-link" href="#" aria-label="Перейти на страницу промоматериалы">Промоматериалы</a>
+              </li>
+              <li class="account__nav-item">
+                <svg class='account__nav-item-svg account__nav-item-svg--statistics' width="21" height="21">
+                  <use xlink:href='img/sprite.svg#icon-statistics'></use>
+                </svg>
+                <a class="account__nav-link" href="#" aria-label="Перейти на страницу статистика">Статистика</a>
+              </li>
+              <li class="account__nav-item">
+                <svg class='account__nav-item-svg account__nav-item-svg--balance' width="21" height="19">
+                  <use xlink:href='img/sprite.svg#icon-balance'></use>
+                </svg>
+                <a class="account__nav-link" href="#" aria-label="Перейти на страницу баланс">Баланс</a>
+              </li>
+              <li class="account__nav-item">
+                <svg class='account__nav-item-svg account__nav-item-svg--avatar' width="21" height="19">
+                  <use xlink:href='img/sprite.svg#icon-avatar'></use>
+                </svg>
+                <a class="account__nav-link" href="#" aria-label="Перейти на страницу персональные данные">Персональные
+                  данные</a>
+              </li>
+              <li class="account__nav-item">
+                <svg class='account__nav-item-svg account__nav-item-svg--faq' width="21" height="21">
+                  <use xlink:href='img/sprite.svg#icon-faq'></use>
+                </svg>
+                <a class="account__nav-link" href="#" aria-label="Раздел вопросов и ответов">Faq</a>
+              </li>
+              <li class="account__nav-item">
+                <svg class='account__nav-item-svg account__nav-item-svg--support' width="21" height="21">
+                  <use xlink:href='img/sprite.svg#icon-support'></use>
+                </svg>
+                <a class="account__nav-link" href="#"
+                  aria-label="Перейти на страницу техническая поддержка">Техподдержка</a>
+              </li>
+              <li class="account__nav-item">
+                <svg class='account__nav-item-svg account__nav-item-svg--exit' width="21" height="19">
+                  <use xlink:href='img/sprite.svg#icon-exit'></use>
+                </svg>
+                <a class="account__nav-link" href="#" aria-label="Выйти из личного кабинета">Выход</a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="col-12 col-xl-9 account__content">
+            <div class="row justify-content-between account__sign-up-container">
+              <nav class="col-3 account__content-breadcrumb" style="--bs-breadcrumb-divider: '>';"
+                aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item">
+                    <a class="breadcrumb-link" href="#" aria-label="Перейти на главную страницу">Главная</a>
+                  </li>
+                  <li class="breadcrumb-item active" aria-current="page">Мои магазины
+                  </li>
+                </ol>
+              </nav>
+              <ul class="row col-3 sign-up">
+                <li class="col-1 sign-up__item sign-up__item--mail sign-up__item--unread-email">
+                  <span class="visually-hidden">Почта</span>
+                  <a class="sign-up__mail" href="#" aria-label="Посмотреть письма в личном аккаунте">
+                    <svg width='24' height='18'>
+                      <use xlink:href='img/sprite.svg#icon-mail'></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="col sign-up__item sign-up__item--avatar">
+                  <a class="sign-up__avatar" href="#" aria-label="Аватарка и имя пользователя">
+                    <picture>
+                      <source type="image/webp" srcset="img/content/avatar.webp">
+                      <img src="img/content/avatar.png" alt="Аватарка Максима Добжанского" width="41" height="41">
+                    </picture>
+                    Максим Добжанский
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <button type="button" class="button button--available button--create-shop">
+              <svg class='button__svg' width='11' height='11'>
+                <use xlink:href='img/sprite.svg#icon-plus'></use>
+              </svg>
+              Создать свой магазин</button>
+
+            <div class="account__management-shops">
+              <h2 class="account__content-title">Управление магазинами</h2>
+              <div class="table-shops">
+                <table class="table table-shops__table">
+                  <thead>
+                    <tr class="table-shops__row table-shops__row--title">
+                      <th scope="col">№</th>
+                      <th scope="col">Название</th>
+                      <th scope="col">Адрес</th>
+                      <th scope="col">Действие</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="table-shops__row">
+                      <td>12345</td>
+                      <td>Дипломная работа</td>
+                      <td>http://www.work5.ru/services</td>
+                      <td class="row table-shops__btn-container">
+                        <a class="button button--available button--management-shops" href="#"
+                          aria-label="Редактировать созданный магазин">
+                          <svg class="button--icon-pencil" width='14' height='16'>
+                            <use xlink:href='img/sprite.svg#icon-pencil'></use>
+                          </svg>
+                          Редактировать</a>
+                        <a class="button button--disable button--management-shops" href="#"
+                          aria-label="Редактировать созданный магазин">
+                          <svg class="button--icon-close" width='13' height='14'>
+                            <use xlink:href='img/sprite.svg#icon-close'></use>
+                          </svg>
+                          Редактировать</a>
+                      </td>
+                    </tr>
+                    <tr class="table-shops__row">
+                      <td>12345</td>
+                      <td>Дипломная работа</td>
+                      <td>http://www.work5.ru/services</td>
+                      <td class="row table-shops__btn-container">
+                        <a class="button button--available button--management-shops" href="#"
+                          aria-label="Редактировать созданный магазин">
+                          <svg class="button--icon-pencil" width='14' height='16'>
+                            <use xlink:href='img/sprite.svg#icon-pencil'></use>
+                          </svg>
+                          Редактировать</a>
+                        <a class="button button--disable button--management-shops" href="#"
+                          aria-label="Редактировать созданный магазин">
+                          <svg class="button--icon-close" width='13' height='14'>
+                            <use xlink:href='img/sprite.svg#icon-close'></use>
+                          </svg>
+                          Редактировать</a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer></footer>
+
+  <div class="popup">
+    <div class="popup__wrapper">
+      <form class="form" action="#" method="post" autocomplete="off">
+        <h3 class="form__title">Создать магазин</h3>
+        <ul class="form__list">
+          <li class="form__list-item">
+            <label class="form__label" for="template-shop">Шаблон</label>
+            <select class="form__select" name="template-shop" id="template-shop">
+              <option value="standart">Стандартный</option>
+              <option value="ready">Готовый</option>
+              <option value="familiar">Привычный</option>
+            </select>
+          </li>
+          <li class="form__list-item">
+            <label class="form__label" for="color-scheme">Цветовая схема</label>
+            <select class="form__select" name="color-scheme" id="color-scheme">
+              <option value="classic">Классическая</option>
+              <option value="standart">Стандартная</option>
+              <option value="neutral">Нейтральная</option>
+            </select>
+          </li>
+          <li class="form__list-item form__list-item--domain">
+            <label class="form__label form__label--domain" for="domain">Домен</label>
+            <input class="form__input" name="domain" type="text" id="domain" placeholder="Например: ivangrozniy"
+              maxlength="40">
+          </li>
+        </ul>
+        <div class="form__description">
+          <svg class='form__notice-svg' width='52' height='51'>
+            <use xlink:href='img/sprite.svg#icon-form-notice'></use>
+          </svg>
+          <p class="form__notice-text">
+            В названии домена разрешены латиница и “-”, запрещается использовать словосочетание Work 5. После создания
+            магазина Вы сможете прикрутить свой домен (например ivangrozniy.ru). Подробнее по <a href="#">ссылке</a>
+          </p>
+        </div>
+        <div class="form__btn-wrapper">
+          <button class="button button--disable button--form" type="button" id="form-btn-cancel">Отмена</button>
+          <button class="button button--available button--form" type="button" id="form-btn-send">Создать</button>
+        </div>
+      </form>
+      <button class="form__btn-close" type="button">
+        <svg class='form__btn-close-svg' width='17' height='17'>
+          <use xlink:href='img/sprite.svg#modal-icon-close'></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <script src="js/bootstrap/bootstrap.min.js"></script>
+  <script src="js/main.js" type="module"></script>
+</body>
+
+</html>
