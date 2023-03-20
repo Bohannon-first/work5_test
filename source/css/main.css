@@ -56,6 +56,10 @@ body {
   overflow: hidden;
 }
 
+.freehosting-2domains-link {
+  display: none;
+}
+
 @font-face {
   font-family: "Roboto";
   src: local("Roboto"), url("../fonts/Roboto-Regular.woff2") format("woff2"), url("../fonts/Roboto-Regular.woff") format("woff");
